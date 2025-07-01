@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knurls Video Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen">
+    <h1>Login</h1>
+    <input type="password" id="password" placeholder="Enter password..." />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="app" style="display:none;">
+    <h1>Knurls Video Tracker</h1>
+    <select id="channel">
+      <option value="Knurls">Knurls (Main Channel)</option>
+      <option value="knurls'">knurls' (Second Channel)</option>
+    </select>
+    <input type="text" id="title" placeholder="Video Title" />
+    <select id="status">
+      <option value="Planned">Planned</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+    <button onclick="addVideo()">Add Video</button>
+
+    <h2>Video List</h2>
+    <div id="video-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
